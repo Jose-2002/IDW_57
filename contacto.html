@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Clínica Médica</title>
+</head>
+<body>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h1>¡Contactate con nosotros!</h1>
+        <p>¿Tenés alguna consulta o querés sacar un turno? Estamos para ayudarte.</p>
+
+        <!-- Contenedor principal -->
+        <div class="contacto-contenedor">
+
+            <!-- Formulario de contacto -->
+            <div class="formulario">
+                <form action="#" method="post">
+                    <label for="nombre">Nombre completo:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="telefono">Teléfono (opcional):</label><br>
+                    <input type="tel" id="telefono" name="telefono"><br><br>
+
+                    <label for="tipo">Tipos de contacto:</label><br>
+                    <select id="tipo" name="tipo">
+                        <option value="turno">Turno médico</option>
+                        <option value="consulta">Consulta general</option>
+                        <option value="reclamo">Reclamos</option>
+                        <option value="otros">Otros</option>
+                    </select><br><br>
+
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
+
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <!-- Información de contacto -->
+            <!-- (Agregar íconos cuando desarrolle CSS)-->
+            <div class="info-contacto">
+                <h3>Información de contacto</h3>
+                <p><strong>Dirección:</strong> Av. Calle Falsa 123, Ciudad de Springfield</p>
+                <p><strong>Teléfono:</strong> (011) 1234-5678</p>
+                <p><strong>Email:</strong> contacto@clinicaejemplo.com</p>
+                <p><strong>Horarios:</strong> Lunes a Viernes de 8:00 a 20:00</p>
+            </div>
+        </div>
+
+        <!-- Redes sociales (simples) -->
+        <div class="redes-sociales">
+            <h3>También podés encontrarnos en:</h3>
+            <p>
+                <a href="#">WhatsApp</a> | 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+
+    </section>
+
+</body>
+</html>
