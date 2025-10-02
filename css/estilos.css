@@ -1,8 +1,25 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: white ;
-    margin: 0;
-    color: rgb(0, 0, 0);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -13,116 +30,87 @@ header {
     box-shadow: 0 2px 6px rgba(112, 112, 103, 0);
 }
 
-head h1 {
-    margin: 0 0 10px 0;
-    font-size: 2em;
+header h1 {
+  margin: 0 0 15px 0;
+  font-size: 2em;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 5px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-nav ul li {
-    display: inline;
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-nav ul a {
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    transition: text-decoration 0.2s, color 0.2s;
+nav ul li a:hover {
+  color: #75a9c5;
 }
 
-nav ul a:hover {
-    text-decoration: underline;
-    color: #04f318;;
+
+
+section.profesionales {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 20px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
-main {
-    max-width: 700px;
-    margin: 40px auto 0 auto;
-    padding: 0 15px;
-}
-
-section {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-section h2 {
-    margin-top: 0;
-    color:#1a3f5c;
-    font-size: 1.5em;
-    margin-bottom: 18px;
-}
-
-.obraSocial {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 15px 0;
-}
-
-.obraSocial li {
-    background: #1a3f5c;
-    border: 1px solid rgb(27, 27, 27);   
-    border-radius: 5px;
-    padding: 6px 12px;
-    color: whitesmoke;
-    font-weight: 400;
-}
-
-.catalogo {
-    background: none;
-    padding: 0;
-    margin-bottom: 0;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-.medicos {
+.lista-profesionales {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
-    max-width: 1000px;
-    padding: 20px 0;
+    width: 100%;
 }
 
-.medicos > div {
-    background: white;
-    border: 1px solid rgb(27, 27, 27);
+.profesional {
+    background: #f0f4f7;
+    border: 1px solid #1a3f5c;
     border-radius: 8px;
     padding: 18px 22px;
-    box-sizing: border-box;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+.profesional:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
 }
 
-.medicos h3 {
-    margin-top: 0;
-    color: #1a3f5c;
-    font-size: 1.1em;
+.profesional h3 {
+  margin-top: 0;
+  color: #1a3f5c;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.profesional p {
+  margin: 6px 0;
+  color: #444;
 }
 
 footer {
   background: #1a3f5c;
   color: #fff;
-  padding: 18px 0;
   text-align: center;
-  margin-top: 40px;
-  font-size: 0.95em;
-  border-top: 1px solid whitesmoke;
+  padding: 10px 0;
 }
-
 
 /* Estilos contacto */
 body.contacto main {
@@ -172,7 +160,7 @@ body.contacto main form button:hover {
   background-color: #16314a;
 }
 /* Estilos sobrenosotros*/
-.institucional {
+.sobre-nosotros {
   width: 100%;
   background: #fff;
   padding: 40px 5vw;
@@ -181,7 +169,7 @@ body.contacto main form button:hover {
   box-shadow: none;
 }
 
-.institucional h2 {
+.sobre-nosotros h2 {
   text-align: center;
   color: #1a3f5c;
   margin-bottom: 25px;
