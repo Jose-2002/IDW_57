@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Clínica Médica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">    
+</head>
+
+<body class="contacto">
+
+    <header>
+
+        <h1>Centro Médico IDW_57</h1>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../institucional.html">Institucional</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+<main>
+    <section id="editar-medicos">
+        <h2>Editar Médico</h2>
+        <div class="editar-contenedor">
+            <div class="formulario">
+                <form id="form-editar">
+                    <label for="nombre">Nombre y Apellido:</label><br>
+                    <input type="text" id="nombre" placeholder="Ej: Dr. Juan Pérez" required><br><br>
+
+                    <label for="nueva-especialidad">Nueva Especialidad:</label><br>
+                    <input type="text" id="nueva-especialidad"><br><br>
+
+                    <label for="nueva-obra">Nueva Obra Social:</label><br>
+                    <input type="text" id="nueva-obra"><br><br>
+
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </form>
+                <div id="mensaje-editar" style="margin-top: 10px;"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 - Centro Médico IDW_57</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>
