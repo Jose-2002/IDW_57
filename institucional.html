@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDW_57 CLINICA</title>
-    <link rel="stylesheet" href="css/estilos.css">    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW_57</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="css/estilos.css"> 
 </head>
 <body>
+    <header>
+        <h1>CENTRO MÉDICO - IDW 57 </h1>
+            <nav class="navbar navbar-expand-sm bg-body-tertiary">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+              <img src="img/logo.png" alt="Logo" width="140" height="140" class="d-inline-block align-text-top">
+        
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            
+              </button>
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+               <div class="navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                <a class="nav-link active" href="institucional.html">Institucional</a>
+                <a class="nav-link active" href="contacto.html">Contacto</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button">Servicios</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="pacientes.html">Pacientes</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="administracion.html">Administración</a></li>
+                    </ul>
+                  </li>
+                   <button id="theme-toggle" class="btn btn-light ms-3">🌙</button>
+               </div>
+             </div>
+           </div>
+          </nav>
 
-  <header>
-    <h1>Centro Médico IDW_57</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="institucional.html">Institucional</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header> 
 
+        <nav class="navbar" style="background-color: #1a3f5c;" data-bs-theme="light"></nav>
+
+
+
+    </header>
+  
   <main>
   <section class="institucional">
     <h2>Institucional</h2>
@@ -39,8 +66,16 @@
     </div>
   </section>
 </main>
-  <footer>
+
+  <footer class="text-center py-3 bg-body-tertiary">
     <p>&copy; 2025 - Centro Médico IDW_57</p>
   </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="js/theme.js"></script>
+
 </body>
 </html>
