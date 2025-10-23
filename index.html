@@ -22,9 +22,18 @@
               </button>
              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                <div class="navbar-nav ms-auto">
-                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                 <a class="nav-link active" href="institucional.html">Institucional</a>
-                 <a class="nav-link active" href="contacto.html">Contacto</a>
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link active" href="institucional.html">Institucional</a>
+                <a class="nav-link active" href="contacto.html">Contacto</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button">Servicios</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="pacientes.html">Pacientes</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="administracion.html">Administración</a></li>
+                    </ul>
+                  </li>
+                   <button id="theme-toggle" class="btn btn-light ms-3">🌙</button>
                </div>
              </div>
            </div>
@@ -49,69 +58,175 @@
                 <a href="https://www.pami.org.ar/" class="btn btn-secondary" target="_blank">PAMI</a>
             </div>
         </section>
-        <section class="catalogo">
-            <h2 class="mb-2"> Profesionales </h2>
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card w-18rem">
-                    <img src="img/ginecologa.png" width="100" height="140">
-                    <div class="card-body">
-                        <h5 class="card-title">Dra. Sonia Espinoza</h5>
-                        <p class="card-text">Especialidad: Ginecología</p>
-                        <a href="#" class="btn btn-primary">Turnos</a>
+      <section class="catalogo">
+            <h2 class="mb-4">Nuestros Profesionales</h2>
+            <div class="row g-4" id="medicos-dinamicos">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="text-center pt-3">
+                            <img src="img/ginecologa.png" class="card-img-top" style="width: 200px; height: 200px; object-fit: cover;" alt="Dra. Sonia Espinoza">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dra. Sonia Espinoza</h5>
+                            <p class="card-text">
+                                <strong>Especialidad:</strong> Ginecología<br>
+                                <strong>Obras Sociales:</strong> OSDE, Swiss Medical, Medifé<br>
+                                <strong>Horarios:</strong> Lunes a Viernes 8:00 - 16:00<br>
+                                <strong>Consultorio:</strong> N° 103<br>
+                                <strong>Matricula:</strong> MN 12345
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#info-espinoza">
+                                    Ver más información
+                                </button>
+                            </div>
+                            <div class="collapse mt-3" id="info-espinoza">
+                                <div class="card card-body">
+                                    <small>
+                                        Especialista en ginecología general, control prenatal y menopausia.
+                                        Más de 15 años de experiencia.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>                    
-                <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card w-18rem">                    
-                    <img src="img/medica.png" width="100" height="140" >
-                    <div class="card-body">
-                        <h5 class="card-title">Dra. María Paz Frana</h5>
-                        <p class="card-text">Especialidad: Medicina Familiar</p>
-                        <a href="#" class="btn btn-primary">Turnos</a>                
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="text-center pt-3">
+                            <img src="img/medica.png" class="card-img-top" style="width: 200px; height: 200px; object-fit: cover;" alt="Dra. María Paz Frana">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dra. María Paz Frana</h5>
+                            <p class="card-text">
+                                <strong>Especialidad:</strong> Medicina Familiar<br>
+                                <strong>Obras Sociales:</strong> Swiss Medical<br>
+                                <strong>Horarios:</strong> Martes, Jueves y Viernes 9:00 - 17:00<br>
+                                <strong>Consultorio:</strong> N° 204<br>
+                                <strong>Matricula:</strong> MN 67890
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#info-frana">
+                                    Ver más información
+                                </button>
+                            </div>
+                            <div class="collapse mt-3" id="info-frana">
+                                <div class="card card-body">
+                                    <small>
+                                        Especialista en medicina general, prevención y tratamiento de enfermedades crónicas.
+                                        Atención integral de adultos y niños.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>  
-                <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card w-18rem">                     
-                    <img src="img/medico.png" width="100" height="140" >
-                    <div class="card-body">                    
-                        <h5 class="card-title">Dr. Martín Rivas</h5>
-                        <p class="card-text">Especialidad: Cardiología</p>
-                        <a href="#" class="btn btn-primary">Turnos</a>                  
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="text-center pt-3">
+                            <img src="img/medico.png" class="card-img-top" style="width: 200px; height: 200px; object-fit: cover;" alt="Dr. Martín Rivas">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dr. Martín Rivas</h5>
+                            <p class="card-text">
+                                <strong>Especialidad:</strong> Cardiología<br>
+                                <strong>Obras Sociales:</strong> OSDE<br>
+                                <strong>Horarios:</strong> Lunes, Miércoles y Viernes 9:00 - 18:00<br>
+                                <strong>Consultorio:</strong> N° 305<br>
+                                <strong>Matricula:</strong> MN 11223
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#info-rivas">
+                                    Ver más información
+                                </button>
+                            </div>
+                            <div class="collapse mt-3" id="info-rivas">
+                                <div class="card card-body">
+                                    <small>
+                                        Especialista en diagnóstico y tratamiento de enfermedades del corazón.
+                                        Realización de ecocardiogramas y pruebas de esfuerzo.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>  
-                <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card w-18rem">  
-                    <img src="img/pediatra.png" width="100" height="140" >
-                    <div class="card-body">    
-                        <h5 class="card-title">Dra. Valentina Sotto</h5>
-                        <p class="card-text">Especialidad: Pediatría</p>
-                        <a href="#" class="btn btn-primary">Turnos</a>   
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="text-center pt-3">
+                            <img src="img/pediatra.png" class="card-img-top" style="width: 200px; height: 200px; object-fit: cover;" alt="Dra. Valentina Sotto">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dra. Valentina Sotto</h5>
+                            <p class="card-text">
+                                <strong>Especialidad:</strong> Pediatría<br>
+                                <strong>Obras Sociales:</strong> Medifé, PAMI<br>
+                                <strong>Horarios:</strong> Lunes, Miércoles y Viernes 8:00 - 16:00<br>
+                                <strong>Consultorio:</strong> N° 406<br>
+                                <strong>Matricula:</strong> MN 44556
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#info-sotto">
+                                    Ver más información
+                                </button>
+                            </div>
+                            <div class="collapse mt-3" id="info-sotto">
+                                <div class="card card-body">
+                                    <small>
+                                        Especialista en salud infantil, control de crecimiento y desarrollo.
+                                        Vacunación y atención de enfermedades pediátricas comunes.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>  
-                <div class="col-12 col-md-6 col-lg-4 d-flex">
-                <div class="card w-18rem">                      
-                    <img src="img/traumatologo.png" width="100" height="140" >
-                    <div class="card-body">                     
-                        <h5 class="card-title">Dr. Nicolás Herrera</h5>
-                        <p class="card-text">Especialidad: Traumatología</p>
-                        <a href="#" class="btn btn-primary">Turnos</a>  
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="text-center pt-3">
+                            <img src="img/traumatologo.png" class="card-img-top" style="width: 200px; height: 200px; object-fit: cover;" alt="Dr. Nicolás Herrera">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dr. Nicolás Herrera</h5>
+                            <p class="card-text">
+                                <strong>Especialidad:</strong> Traumatología<br>
+                                <strong>Obras Sociales:</strong> PAMI, OSDE<br>
+                                <strong>Horarios:</strong> Martes, Jueves y Sábado 9:00 - 14:00<br>
+                                <strong>Consultorio:</strong> N° 507<br>
+                                <strong>Matricula:</strong> MN 77889
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-primary">Solicitar Turno</a>
+                                <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#info-herrera">
+                                    Ver más información
+                                </button>
+                            </div>
+                            <div class="collapse mt-3" id="info-herrera">
+                                <div class="card card-body">
+                                    <small>
+                                        Especialista en lesiones y enfermedades del aparato locomotor.
+                                        Cirugía ortopédica y traumatológica.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>  
-
             </div>
         </section>
-
-
 
     </main>
     <footer>
         <p>&copy; 2025 - Centro Médico IDW_57</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/medicos.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
