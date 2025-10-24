@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         formBaja.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const nombre = document.getElementById('nombre-baja').value.trim().toLowerCase();
+            const nombre = document.getElementById('nombre').value.trim().toLowerCase();
             let medicos = JSON.parse(localStorage.getItem('medicos')) || [];
 
             const index = medicos.findIndex(m => m.nombre.toLowerCase() === nombre);
