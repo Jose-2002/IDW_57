@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // ==========================
-    // ALTA DE MÉDICOS
-    // ==========================
+    
+    // alta de medicos
     const formAlta = document.getElementById('form-alta');
     const mensajeAlta = document.getElementById('mensaje-alta');
 
@@ -16,11 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const consultorio = document.getElementById('consultorio').value.trim();
             const matricula = document.getElementById('matricula').value.trim();
             const descripcion = document.getElementById('descripcion').value.trim();
-            const img = document.getElementById('img').value.trim() || 'img/medico.png';
+            const imgInput = document.getElementById('img');
+            let img = '';
 
-            if (!nombre || !especialidad || !obras) {
-                alert('Por favor completá los campos obligatorios: Nombre, Especialidad y Obras.');
-                return;
+            if (imgInput && imgInput.value.trim() !== '') {
+                img = imgInput.value.trim();
+            } else {
+                img = 'img/medico_generico.jpg'; // Ruta de la imagen por defecto
             }
 
             const medicos = JSON.parse(localStorage.getItem('medicos')) || [];
@@ -48,9 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ==========================
-    // BAJA DE MÉDICOS
-    // ==========================
+    //baja de medicos
     const formBaja = document.getElementById('form-baja');
     const mensajeBaja = document.getElementById('mensaje-baja');
 
@@ -80,9 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ==========================
-    // EDICIÓN DE MÉDICOS
-    // ==========================
+    //editar medicos
     const formEditar = document.getElementById('form-editar');
     const mensajeEditar = document.getElementById('mensaje-editar');
 
