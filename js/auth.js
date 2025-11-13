@@ -118,7 +118,7 @@ function verificarSesion() {
 //CERRAR SESIÓN
 function cerrarSesion() {
     sessionStorage.clear();
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 }
 
 //CARGAR USUARIOS (solo si estamos en usuarios.html)
