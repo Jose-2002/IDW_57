@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDW_57</title>
+    <title>IDW_57 - Administración</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
     <link rel="stylesheet" href="css/estilos.css"> 
+
 </head>
 <body>
     <header>
         <h1>CENTRO MÉDICO - IDW 57 </h1>
-            <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-              <img src="img/logo.png" alt="Logo" width="140" height="140" class="d-inline-block align-text-top">
-        
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo" width="140" height="140" class="d-inline-block align-text-top"></a>
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
-            
               </button>
              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                <div class="navbar-nav ms-auto">
@@ -39,34 +37,65 @@
              </div>
            </div>
           </nav>
-
-
-        <nav class="navbar" style="background-color: #1a3f5c;" data-bs-theme="light"></nav>
-
+          <hr class="linea-header">
     </header>
 
-    <h2>Panel de Administración de Médicos</h2>
-    
-  </header>
+<main class="container mt-5">
+    <h2>Panel de Administración</h2> 
 
-    <main class="container mt-1">
-        <section id="modificacion-contenedor">
-            <h2>Selecciona para agregar o quitar.</h2>
-            
-            <div class="modificacion-contenedor">
-                <div class="formulario">
-                    <a href="Adm-Medicos/alta_medicos.html" class="btn btn-primary">Dar de alta médico</a><br><br>
-                    <a href="Adm-Medicos/baja_medicos.html" class="btn btn-primary">Dar de baja médico</a><br><br>
-                    <a href="Adm-Medicos/editar_medicos.html" class="btn btn-primary">Editar médico</a><br><br>
-                </div>
-            </div>
-        </section>
-    </main>
+    <div id="admin-panel">
+        
+        <div class="section-card">
+            <h3><i class="fa-solid fa-user-doctor"></i> Gestión de Médicos</h3>
+            <a href="Adm-Medicos/gestion_medicos.html" class="btn-action">
+                <i class="fa-solid fa-stethoscope me-2"></i>Gestionar Médicos
+            </a>
+        </div>
+
+        <div class="section-card">
+            <h3><i class="fa-solid fa-hospital-user"></i> Gestión de Especialidades</h3>
+            <a href="Adm-Especialidades/gestion_especialidades.html" class="btn-action">
+                <i class="fa-solid fa-hospital me-2"></i>Gestionar Especialidades
+            </a>
+        </div>
+
+        <div class="section-card">
+            <h3><i class="fa-solid fa-handshake-angle"></i> Gestión de Obras Sociales</h3>
+            <a href="Adm-ObrasSociales/gestion_obrasocial.html" class="btn-action">
+                <i class="fa-solid fa-handshake me-2"></i>Gestionar Obras Sociales
+            </a>
+        </div>
+
+        <div class="section-card">
+            <h3><i class="fa-solid fa-calendar-check"></i> Gestión de Turnos</h3>
+            <a href="Adm-Turnos/adm-turnos.html" class="btn-action">
+                <i class="fa-solid fa-calendar-days me-2"></i>Registrar / Editar Turnos
+            </a>
+        </div>
+
+        <div class="section-card">
+            <h3><i class="fa-solid fa-calendar-check"></i> Visualización de Reservas</h3>
+            <a href="Adm-Turnos/adm-reservas.html" class="btn-action">
+                <i class="fa-solid fa-calendar-days me-2"></i>Visualizar Reservas
+            </a>
+        </div>
+
+        <div class="section-card">
+            <h3><i class="fa-solid fa-calendar-check"></i>Usuarios</h3>
+            <a href="usuarios.html" class="btn-action">
+                <i class="fa-solid fa-calendar-days me-2"></i>Usuarios
+            </a>
+        </div>
+
+    </div>
+</main>
+    
     <footer>
- <p>&copy; 2025 - Centro Médico IDW_57</p>
+        <p>&copy; 2025 - Centro Médico IDW_57</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="js/theme.js" defer></script>
-  <script src="../js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/theme.js" defer></script> 
+    <script src="js/admin.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>

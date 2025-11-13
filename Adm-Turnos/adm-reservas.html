@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW_57 - Administración de Reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../css/estilos.css"> 
+</head>
+
+<body>
+    <header>
+        <h1>CENTRO MÉDICO - IDW 57 </h1>
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="Logo" width="140" height="140" class="d-inline-block align-text-top"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" href="../index.html">Inicio</a>
+                        <a class="nav-link active" href="../institucional.html">Institucional</a>
+                        <a class="nav-link active" href="../contacto.html">Contacto</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button">Servicios</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pacientes.html">Pacientes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="../administracion.html">Administración</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <button id="theme-toggle" class="btn btn-outline-light ms-3" style="border-radius: 50%; font-size: 1.2rem;">🌙</button>
+                </div>
+            </div>
+        </nav>
+        <hr class="linea-header">
+    </header>
+
+
+    <main>
+        <div class="container mt-5">
+            <h3>Visualización de Reservas</h3>
+            <h6>Listado completo de reservas tomadas por los pacientes.</h6>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="tablaReservas">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>ID Reserva</th>
+                            <th>Fecha y Hora</th>
+                            <th>Médico</th>
+                            <th>Paciente (Doc)</th>
+                            <th>Especialidad</th>
+                            <th>Obra Social</th>
+                            <th>Costo Total</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8" class="text-center">Cargando reservas...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Centro Médico IDW_57</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/adm-reservas.js"></script> 
+</body>
+</html>

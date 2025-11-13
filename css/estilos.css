@@ -212,3 +212,233 @@ body.contacto main form button:hover {
   box-sizing: border-box;
   display: block;
 }
+
+  /* Estilos adicionales para la página de administración */
+  main {
+      padding-top: 20px;
+      display: block; 
+  }
+
+  #admin-panel {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+  }
+
+  .section-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-borde);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+  }
+  
+  .section-card:hover {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .section-card h3 {
+      color: var(--color-borde);
+      border-bottom: 2px solid var(--color-borde);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+  }
+
+  .section-card h3 i {
+      margin-right: 10px;
+  }
+
+  .btn-action {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 1em;
+      font-weight: 500;
+      background-color: var(--color-btn);
+      border-color: var(--color-btn);
+      color: var(--color-btn-texto);
+      transition: background-color 0.2s, transform 0.1s;
+  }
+
+  .btn-action:hover {
+      background-color: #16314a; 
+      border-color: #16314a;
+      transform: translateY(-1px);
+  }
+  
+  /* Aseguramos que los títulos de la página sigan el estilo */
+  h2 {
+      color: var(--color-borde);
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      font-size: 2em;
+  }
+
+/* Estilos específicos para la gestión de tabla/listado */
+main.container {
+    max-width: 900px;
+    margin: 40px auto;
+    display: block;
+}
+.gestion-card {
+    background: var(--color-card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: left;
+}
+.turno-item {
+    border: 1px solid var(--color-borde);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.turno-info span {
+    display: block;
+    color: var(--color-texto);
+}
+
+/* --- Estilos específicos para Tablas de Gestión (Editar/Eliminar) --- */
+main.container {
+    max-width: 900px; 
+    margin: 40px auto;
+    display: block;
+}
+
+/* Aplicamos los estilos del formulario de contacto/gestión */
+main.container form {
+    background: var(--color-card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: left;
+    display: flex; 
+    flex-direction: column;
+}
+
+/* Anulamos la limitación de 600px para las páginas de gestión (ej. gestion_medicos.html) */
+body.contacto main {
+  max-width: none; 
+  margin: 40px auto;
+  background: none; 
+  box-shadow: none;
+  
+}
+
+/* Estilos para el formulario dentro de main.container (como en gestion_medicos.html) */
+main.container #formMedico, 
+main.container #formObraSocial,
+main.container #formEspecialidad {
+    max-width: 900px; 
+    width: 100%;
+    margin-bottom: 25px; 
+} 
+
+/* Centra el contenido en el cuerpo principal de la página de gestión */
+main.container h2, main.container h3 {
+    text-align: center;
+}
+
+/* Asegura que la columna de Acciones sea compacta y centrada */
+.table-bordered th:nth-child(n+3),
+.table-bordered td:nth-child(n+3) {
+    text-align: center;
+    vertical-align: middle; 
+}
+
+/* Estilo para el contenedor de los botones de acción para que estén uno al lado del otro */
+.table-bordered td:last-child {
+    white-space: nowrap; 
+    min-width: 120px; 
+}
+
+/* Estilo para botones de acción dentro de la tabla */
+.table-bordered .btn-sm {
+    padding: .25rem .5rem; 
+    font-size: .875rem; 
+    line-height: 1.5;
+    border-radius: .2rem;
+    margin: 2px; 
+}
+
+.turno-card {
+  cursor: pointer;
+  border: 2px solid;
+  transition: all 0.2s ease-in-out;
+}
+.turno-card:hover {
+  border-color: #16314a; 
+  box-shadow: 0 0 8px rgba(14, 49, 87, 0.4);
+}
+
+.turno-card.selected {
+  border-color: #28a745; 
+  background-color: #d4edda;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+}
+
+/* Título */
+.tabla-titulo {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* La tabla ocupa todo el ancho del contenedor */
+#tablaUsuarios {
+  width: 100%;
+  table-layout: fixed; 
+  border-collapse: collapse;
+}
+
+/* Ajustes de celdas */
+#tablaUsuarios th,
+#tablaUsuarios td {
+  padding: 12px 10px;
+  text-align: left;
+  word-wrap: break-word; 
+  vertical-align: middle;
+}
+
+/* Ancho mínimo de columnas importantes para que no se compriman demasiado */
+#tablaUsuarios th:nth-child(1),
+#tablaUsuarios td:nth-child(1) { min-width: 120px; }
+#tablaUsuarios th:nth-child(2),
+#tablaUsuarios td:nth-child(2) { min-width: 120px; }
+#tablaUsuarios th:nth-child(4),
+#tablaUsuarios td:nth-child(4) { min-width: 180px; }
+
+/* Estilo de cabecera */
+#tablaUsuarios thead th {
+  background-color: #cfe2ff;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #tablaUsuarios th,
+  #tablaUsuarios td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Línea que marca el fin del header */
+.linea-header {
+  border: none;
+  height: 5px;
+  background-color: var(--color-borde);
+  margin: 0;
+  opacity: 0.8;
+  position: relative;
+  z-index:1;
+}

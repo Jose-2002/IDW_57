@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDW_57</title>
+    <title>IDW_57 - Visitante</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
     <link rel="stylesheet" href="css/estilos.css"> 
+
 </head>
 <body>
     <header>
         <h1>CENTRO MÉDICO - IDW 57 </h1>
-            <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-              <img src="img/logo.png" alt="Logo" width="140" height="140" class="d-inline-block align-text-top">
-        
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo" width="140" height="140" class="d-inline-block align-text-top"></a>
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
-            
               </button>
              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                <div class="navbar-nav ms-auto">
@@ -39,28 +37,100 @@
              </div>
            </div>
           </nav>
-
-
-        <nav class="navbar" style="background-color: #1a3f5c;" data-bs-theme="light"></nav>
-
+          <hr class="linea-header">
     </header>
 
-    <div class="main">
-        <div class="container mt-5">
-            <div class="alert alert-warning text-center" role="alert">
-               <h1> Portal Pacientes </h1>
-               <img src="img/enconstruccion.img" alt="Sitio en Construcción" class="img-fluid mb-3" style="max-width: 300px;">
-               <h1 class="alert-heading">¡Sitio en Construcción!</h1>
-               <p>Estamos trabajando para brindarte el mejor servicio. Vuelve pronto.</p>
+    <main class="container my-4">
+        <h3 class="mb-4">Reservar Turno Médico</h3>
+        
+        <div class="card p-4 mb-4 shadow-sm">
+            <h5>1. Seleccione Especialidad y Médico</h5>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="especialidadSelect" class="form-label">Especialidad:</label>
+                    <select class="form-select" id="especialidadSelect" required>
+                        <option value="" disabled selected>Seleccione una Especialidad</option>
+                        </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="medicoSelect" class="form-label">Médico:</label>
+                    <select class="form-select" id="medicoSelect" required disabled>
+                        <option value="" disabled selected>Seleccione un Médico</option>
+                        </select>
+                </div>
+            </div>
+            <p class="text-center mt-3" id="medico-seleccionado">Por favor, seleccione una especialidad y un médico.</p>
+        </div>
+        <div class="card p-4 mb-4 shadow-sm">
+            <h5>2. Seleccione Día y Horario</h5>
+            <div class="row mb-3">
+                <div class="col-md-6 mb-3">
+                    <label for="fechaSeleccionada" class="form-label">Seleccionar Día:</label>
+                    <input type="date" class="form-control" id="fechaSeleccionada" required disabled> 
+                    </div>
+            </div>
+
+            <div id="ListaTurnosContainer">
+                <p class = "alert alert-secondary text-center" id="mensaje-turnos">Por favor, seleccione un médico y una fecha para ver los turnos disponibles.</p>
+            
+            <div id="listaTurnos" class="row">
+                </div>
+            <div id="turno-seleccionado-info" class="alert alert-info mt-3 d-none">
+                Turno Seleccionado: <strong id="turno-seleccionado-detalle"></strong>
             </div>
         </div>
-    </div>
+        
+        <form id="formReserva" class="card p-4 mb-4 shadow-sm">
+            <input type="hidden" id="inputMedicoId">
+            <input type="hidden" id="inputTurnoId">
 
+            <h5>3. Ingrese sus Datos Personales y de Cobertura</h5>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="apellidoNombre" class="form-label">Apellido y Nombre</label>
+                    <input type="text" class="form-control" id="apellidoNombre" required disabled>
+                </div>
+                <div class="col-md-6">
+                    <label for="documento" class="form-label">Documento (DNI/CI)</label>
+                    <input type="number" class="form-control" id="documento" required disabled>
+                </div>
+                <div class="col-md-6">
+                    <label for="obraSocialId" class="form-label">Obra Social / Prepaga</label>
+                    <select class="form-select" id="obraSocialId" required disabled>
+                        <option value="0" selected>Particular / Sin Obra Social</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="especialidadId" class="form-label">Especialidad (Informativo)</label>
+                    <input type="text" class="form-control" id="especialidadNombre" disabled>
+                    <input type="hidden" id="especialidadId"> 
+                </div>
+            </div>
 
+            <h5 class="mt-4">4. Resumen y Confirmación</h5>
+            <div id="resumen-reserva" class="border rounded p-3 bg-light text-start mx-auto">
+                <p><strong>Médico:</strong> <span id="resumen-medico">N/A</span></p>
+                <p><strong>Especialidad:</strong> <span id="resumen-especialidad">N/A</span></p>
+                <p><strong>Fecha y Hora:</strong> <span id="resumen-fecha-hora">N/A</span></p>
+                <p><strong>Obra Social:</strong> <span id="resumen-os">Particular</span></p>
+                <p class="h4 mt-3"><strong>Costo Total:</strong> <span class="badge bg-success" id="resumen-costo">$0.00</span></p>
+            </div>
+            
+            <div class="mt-4 d-grid gap-2">
+                <button type="submit" class="btn btn-lg btn-primary" id="btnConfirmarReserva" disabled>Confirmar Reserva y Obtener Comprobante</button>
+            </div>
+            <div id="mensaje-reserva" class="alert mt-3 d-none" role="alert"></div>
+        </form>
+
+    </main>
+    
     <footer>
         <p>&copy; 2025 - Centro Médico IDW_57</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="js/theme.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/reservar-turnos.js"></script>
+    <script src="js/auth.js"></script> 
 </body>
 </html>

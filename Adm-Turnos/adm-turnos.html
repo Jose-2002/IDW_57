@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW_57 - Administración de Turnos </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../css/estilos.css"> 
+    <style>
+        .container { max-width: 1000px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CENTRO MÉDICO - IDW 57 </h1>
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="Logo" width="140" height="140" class="d-inline-block align-text-top"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" href="../index.html">Inicio</a>
+                        <a class="nav-link active" href="../institucional.html">Institucional</a>
+                        <a class="nav-link active" href="../contacto.html">Contacto</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button">Servicios</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pacientes.html">Pacientes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="../administracion.html">Administración</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <button id="theme-toggle" class="btn btn-outline-light ms-3" style="border-radius: 50%; font-size: 1.2rem;">🌙</button>
+                </div>
+            </div>
+        </nav>
+        <hr class="linea-header">
+    </header>
+
+    <main class="container my-4">
+    <h3 class="mb-4"> Administración de Turnos</h3>
+    <h5>Gestione la disponibilidad de horarios para cada médico. Los turnos reservados se deshabilitarán automáticamente.</h5>
+    
+    <form id="formTurno" class="border rounded p-4 bg-light mb-4">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="medicoId" class="form-label">Médico Asignado</label>
+                <select class="form-select" id="medicoId" required>
+                    <option value="">Seleccione un Médico...</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="fecha" class="form-label">Día de los Turnos</label>
+                <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <script>
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById("fecha").setAttribute('min', today);
+            </script>
+        </div>
+
+        <div class="row g-3 mt-3">
+            <div class="col-md-4">
+                <label for="horaInicio" class="form-label">Hora de Inicio (HH:MM)</label>
+                <input type="time" class="form-control" id="horaInicio" value="09:00" required>
+            </div>
+            <div class="col-md-4">
+                <label for="horaFin" class="form-label">Hora de Fin (HH:MM)</label>
+                <input type="time" class="form-control" id="horaFin" value="17:00" required>
+            </div>
+            <div class="col-md-4">
+                <label for="intervalo" class="form-label">Intervalo (Minutos)</label>
+                <input type="number" class="form-control" id="intervalo" value="30" min="5" required>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary"> Generar y Guardar Turnos </button>
+            <button type="reset" class="btn btn-secondary"> Limpiar Formulario </button>
+        </div>
+        <div id="mensaje" class="alert d-none" role="alert"> </div>
+    </form>
+
+        <h3>Listado de Turnos Disponibles y Reservados</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="tablaReservas">
+                <thead class="table-primary">
+                    <tr>
+                        <th>ID</th>
+                        <th>Médico</th>
+                        <th>Fecha y Hora</th>
+                        <th>Disponibilidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="text-center">Cargando turnos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Centro Médico IDW_57</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../js/theme.js" defer></script>
+    <script src="../js/adm-turnos.js"></script>
+
+</body>
+</html>
